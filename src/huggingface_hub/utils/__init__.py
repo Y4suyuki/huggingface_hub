@@ -16,7 +16,12 @@
 
 # ruff: noqa: F401
 
-from huggingface_hub.errors import LocalTokenNotFoundError, NotASafetensorsRepoError, SafetensorsParsingError
+from huggingface_hub.errors import (
+    LocalTokenNotFoundError,
+    NotASafetensorsRepoError,
+    OfflineModeIsEnabled,
+    SafetensorsParsingError,
+)
 
 from . import tqdm as _tqdm  # _tqdm is the module
 from ._cache_assets import cached_assets_path
@@ -49,7 +54,7 @@ from ._fixes import SoftTemporaryDirectory, WeakFileLock, yaml_dump
 from ._git_credential import list_credential_helpers, set_git_credential, unset_git_credential
 from ._headers import build_hf_headers, get_token_to_send
 from ._hf_folder import HfFolder
-from ._http import OfflineModeIsEnabled, configure_http_backend, get_session, http_backoff, reset_sessions
+from ._http import configure_http_backend, get_session, http_backoff, reset_sessions
 from ._pagination import paginate
 from ._paths import IGNORE_GIT_FOLDER_PATTERNS, filter_repo_objects
 from ._runtime import (
