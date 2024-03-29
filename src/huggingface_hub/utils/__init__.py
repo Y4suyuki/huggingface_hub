@@ -17,7 +17,6 @@
 # ruff: noqa: F401
 
 from huggingface_hub.errors import (
-    LocalTokenNotFoundError,
     NotASafetensorsRepoError,
     OfflineModeIsEnabled,
     SafetensorsParsingError,
