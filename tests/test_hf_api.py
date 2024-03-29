@@ -50,6 +50,7 @@ from huggingface_hub.constants import (
     REPO_TYPE_SPACE,
     SPACES_SDK_TYPES,
 )
+from huggingface_hub.errors import NotASafetensorsRepoError
 from huggingface_hub.file_download import hf_hub_download
 from huggingface_hub.hf_api import (
     AccessRequest,
@@ -69,7 +70,6 @@ from huggingface_hub.utils import (
     BadRequestError,
     EntryNotFoundError,
     HfHubHTTPError,
-    NotASafetensorsRepoError,
     RepositoryNotFoundError,
     RevisionNotFoundError,
     SafetensorsFileMetadata,
