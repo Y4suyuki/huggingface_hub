@@ -16,10 +16,6 @@
 
 # ruff: noqa: F401
 
-from huggingface_hub.errors import (
-    SafetensorsParsingError,
-)
-
 from . import tqdm as _tqdm  # _tqdm is the module
 from ._cache_assets import cached_assets_path
 from ._cache_manager import (

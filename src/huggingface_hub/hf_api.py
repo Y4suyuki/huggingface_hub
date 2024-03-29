@@ -47,7 +47,7 @@ from requests.exceptions import HTTPError
 from tqdm.auto import tqdm as base_tqdm
 from tqdm.contrib.concurrent import thread_map
 
-from huggingface_hub.errors import LocalTokenNotFoundError, NotASafetensorsRepoError
+from huggingface_hub.errors import LocalTokenNotFoundError, NotASafetensorsRepoError, SafetensorsParsingError
 
 from ._commit_api import (
     CommitOperation,
@@ -117,7 +117,6 @@ from .utils import (  # noqa: F401 # imported for backward compatibility
     RepositoryNotFoundError,
     RevisionNotFoundError,
     SafetensorsFileMetadata,
-    SafetensorsParsingError,
     SafetensorsRepoMetadata,
     TensorInfo,
     build_hf_headers,
