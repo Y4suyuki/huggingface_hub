@@ -12,13 +12,14 @@ from urllib.parse import quote, unquote
 import fsspec
 from requests import Response
 
+from huggingface_hub.errors import HFValidationError
+
 from ._commit_api import CommitOperationCopy, CommitOperationDelete
 from .constants import DEFAULT_REVISION, ENDPOINT, REPO_TYPE_MODEL, REPO_TYPES_MAPPING, REPO_TYPES_URL_PREFIXES
 from .file_download import hf_hub_url
 from .hf_api import HfApi, LastCommitInfo, RepoFile
 from .utils import (
     EntryNotFoundError,
-    HFValidationError,
     RepositoryNotFoundError,
     RevisionNotFoundError,
     hf_raise_for_status,

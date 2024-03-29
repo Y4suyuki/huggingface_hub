@@ -2,8 +2,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import Mock, patch
 
+from huggingface_hub.errors import HFValidationError
 from huggingface_hub.utils import (
-    HFValidationError,
     smoothly_deprecate_use_auth_token,
     validate_hf_hub_args,
     validate_repo_id,
