@@ -22,6 +22,7 @@ from urllib.parse import quote, urlparse
 import requests
 
 from huggingface_hub import constants
+from huggingface_hub.errors import OfflineModeIsEnabled
 
 from . import __version__  # noqa: F401 # for backward compatibility
 from .constants import (
@@ -50,7 +51,6 @@ from .utils import (
     FileMetadataError,
     GatedRepoError,
     LocalEntryNotFoundError,
-    OfflineModeIsEnabled,
     RepositoryNotFoundError,
     RevisionNotFoundError,
     SoftTemporaryDirectory,

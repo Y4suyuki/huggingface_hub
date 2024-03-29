@@ -6,6 +6,8 @@ import requests
 from tqdm.auto import tqdm as base_tqdm
 from tqdm.contrib.concurrent import thread_map
 
+from huggingface_hub.errors import OfflineModeIsEnabled
+
 from .constants import (
     DEFAULT_ETAG_TIMEOUT,
     DEFAULT_REVISION,
@@ -18,7 +20,6 @@ from .hf_api import DatasetInfo, HfApi, ModelInfo, SpaceInfo
 from .utils import (
     GatedRepoError,
     LocalEntryNotFoundError,
-    OfflineModeIsEnabled,
     RepositoryNotFoundError,
     RevisionNotFoundError,
     filter_repo_objects,
